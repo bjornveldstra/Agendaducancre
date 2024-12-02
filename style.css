@@ -1,0 +1,400 @@
+/* style.css */
+body {
+    font-family: 'Reddit Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#login-container {
+    background: #333; /* Fond gris foncé */
+    color: white;
+    padding: 20px;
+    border-radius: 15px; /* Arrondi plus prononcé */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center; /* Centre le contenu */
+}
+
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 450px;
+}
+
+/* Labels ("ID" et "Mot de passe") */
+label {
+    font-family: 'Poppins', sans-serif; /* Police moderne et lisible */
+    font-size: 14px; /* Taille du texte */
+    color: white; /* Couleur blanche pour correspondre au thème */
+    text-align: left; /* Toujours aligné à gauche */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Bouton ("Connexion") */
+button {
+    font-family: 'Poppins', sans-serif; /* Même police que les labels */
+    font-size: 16px; /* Taille légèrement plus grande pour le bouton */
+    color: white;
+    background-color: rgba(255, 255, 0, 0.842); /* Bleu */
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+    width: 80%;
+    height: 60px;
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: #FFD700; /* Couleur bleue plus foncée au survol */
+}
+
+/* Champs de saisie ("ID" et "Mot de passe") */
+input {
+    font-family: 'Poppins', sans-serif; /* Police moderne */
+    font-size: 14px;
+    color: black; /* Texte en noir pour la lisibilité */
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+input, select, button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+#logo {
+    width: 100px; /* Taille du logo */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+/* Titre */
+#title {
+    font-family: 'Poppins', sans-serif; /* Police alternative pour Spitfire BC */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0; /* Espacement entre le logo et le titre */
+    font-weight: 700; /* Met en gras */
+}
+
+/* Slogan */
+#slogan {
+    font-family: 'Playfair Display', serif; /* Police alternative pour Fjord BC */
+    color: rgba(255, 255, 0, 0.842); /* Jaune pour le slogan */
+    font-size: 14px; /* Plus petit que le titre */
+    text-align: center;
+    margin: 5px 0 20px 0; /* Espacement entre le titre et le formulaire */
+    font-style: italic; /* Style élégant pour le slogan */
+}
+
+
+
+
+ /* ----------------------------Calendar------------------------------*/
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.calendar-container {
+    background-color: #333; /* Fond sombre */
+    color: white; /* Texte blanc */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px; /* Coins arrondis pour le conteneur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden; /* Masque les débordements du tableau */
+}
+
+/* Tableau du calendrier */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    border-radius: 15px; /* Coins arrondis pour le tableau */
+}
+
+/* Cellules des dates */
+td {
+    border: 1px solid white; /* Bordures blanches */
+    height: 80px;
+    text-align: center;
+    vertical-align: top;
+    padding: 5px;
+    color: white; /* Texte en blanc */
+    background-color: #333; /* Fond sombre pour les dates */
+    position: relative; /* Nécessaire pour le positionnement absolu des enfants */
+}
+
+/* En-têtes des jours de la semaine */
+th {
+    background-color: #444; /* Fond légèrement plus clair pour les en-têtes */
+    font-weight: bold;
+    font-size: 14px; /* Taille de police réduite */
+    height: 40px; /* Réduit la hauteur des en-têtes */
+    width: 60px; /* Largeur fixe uniquement pour les en-têtes */
+    text-align: center; /* Centre le texte */
+    vertical-align: middle; /* Aligne verticalement le texte au milieu */
+    padding: 2px; /* Réduit l'espacement interne */
+}
+
+
+/* Points des tâches */
+/* Cellules des dates */
+td {
+    position: relative;
+    height: 80px; /* Hauteur des cellules */
+    text-align: center; /* Texte centré horizontalement */
+    vertical-align: top; /* Date en haut de la cellule */
+    padding: 5px;
+}
+
+/* Conteneur pour les points des tâches */
+td .task-dots-container {
+    position: absolute;
+    top: 60%; /* Ajustez ici pour descendre les points */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Aligne les points verticalement */
+    align-items: center;
+}
+
+
+/* Points des tâches */
+td .task-dots-container span.task-dot {
+    width: 17px; /* Taille du point */
+    height: 17px; /* Taille du point */
+    border-radius: 50%; /* Cercle parfait */
+    margin: 2px 0; /* Espacement vertical entre les points */
+    background-color: #007bff; /* Couleur par défaut (point bleu) */
+    cursor: pointer;
+}
+
+
+
+#prev-month,
+#next-month {
+    padding: 5px 10px; /* Réduit l'espacement interne */
+    font-size: 12px; /* Réduit la taille du texte */
+    border-radius: 5px; /* Arrondir les bords */
+    width: 30px; /* Largeur fixe */
+    height: 30px; /* Hauteur fixe */
+    background-color: rgba(255, 255, 0, 0.842); /* Bleu par défaut */
+    color: white; /* Texte en blanc */
+    border: none; /* Supprime les bordures */
+    cursor: pointer; /* Indique que c'est cliquable */
+}
+
+#prev-month:hover,
+#next-month:hover {
+    background-color: #b0b300; /* Couleur au survol */
+}
+
+
+.month-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 0, 0.842); /* Fond jaune */
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%; /* Boutons ronds */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+}
+
+.month-button i {
+    font-size: 16px; /* Taille des icônes */
+    color: #333;
+}
+
+.month-button:hover {
+    background-color: #FFD700; /* Jaune doré au survol */
+}
+
+
+/* ----------------------------- Fenetre -----------------------*/
+
+.modal {
+    display: none; /* Par défaut, la modale est masquée */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#buttonsupprimer {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #ff4d4d; /* Rouge */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; /* Ajuste la taille de la police */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    width: auto; /* Ajuste automatiquement la largeur */
+}
+
+
+#task-modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* Réduit l'espacement vertical */
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 60%; /* Augmente la largeur de la modale */
+    max-width: 800px; /* Définit une largeur maximale pour éviter qu'elle soit trop large */
+    border-radius: 10px;
+    text-align: left;
+    overflow-y: auto; /* Ajoute un défilement vertical si nécessaire */
+    max-height: 80vh; /* Limite la hauteur de la modale */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+/* Titre centré de la modale */
+.modal-content h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Liste des tâches */
+#task-list {
+    list-style-type: none; /* Retire les puces */
+    padding: 0;
+    margin: 0;
+}
+
+/* Élément individuel dans la liste des tâches */
+#task-list .task-item {
+    display: flex; /* Flexbox pour aligner les éléments */
+    justify-content: flex-start; /* Aligne tout sur la gauche */
+    align-items: center; /* Centre verticalement */
+    padding: 5px 0; /* Espacement vertical */
+    border-bottom: 1px solid #f0f0f0; /* Ligne de séparation pour chaque tâche */
+}
+
+/* Texte de la tâche */
+#task-list .task-text {
+    flex: 3; /* Étend le texte pour occuper l'espace disponible */
+    font-size: 14px;
+    color: black; /* Texte en noir */
+    text-align: left; /* Aligne à gauche */
+    margin-right: 10px; /* Espace entre le texte et le nom */
+}
+
+/* Auteur de la tâche */
+#task-list .task-author {
+    flex: 1; /* Ajuste la largeur pour une bonne répartition */
+    color: gray; /* Couleur plus claire pour le nom de l'utilisateur */
+    font-size: 12px;
+    font-style: italic; /* Style italique pour l'auteur */
+    text-align: left; /* Aligne également à gauche */
+    margin-right: 10px; /* Espacement entre l'auteur et le bouton */
+}
+
+/* Bouton "Supprimer" */
+/* Bouton Supprimer dans la modale */
+#task-list button {
+    background-color: #ff4d4d; /* Rouge */
+    color: white; /* Texte en blanc */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px; /* Dimensions compactes */
+    font-size: 12px; /* Texte plus petit */
+    cursor: pointer;
+    width: auto; /* S'adapte au texte */
+    height: auto; /* S'adapte au texte */
+    margin-left: 10px; /* Espacement pour le visuel */
+    display: inline-block; /* Pour éviter qu'il ne prenne toute la largeur */
+}
+
+#task-list button:hover {
+    background-color: #ff0000; /* Rouge plus foncé au survol */
+}
+
+
+
+
+
+

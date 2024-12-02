@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier</title>
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <header>
+            <button id="prev-month" class="month-button">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <h1 id="current-month"></h1>
+            <button id="next-month" class="month-button">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </header>        
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th>Dim</th>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mer</th>
+                    <th>Jeu</th>
+                    <th>Ven</th>
+                    <th>Sam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les jours seront générés dynamiquement -->
+            </tbody>
+        </table>
+    </div>
+    <script src="app/calendar.js"></script>
+</body>
+</html>
+
+<!-------------------- Fenetre ---------------------------->
+
+<div id="task-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal-button" class="close">&times;</span> <!-- Assure-toi que cet ID est correct -->
+        <h2>Devoirs pour le <span id="modal-date"></span></h2>
+        <ul id="task-list">
+            <!-- Les tâches apparaîtront ici dynamiquement -->
+        </ul>
+    </div>
+</div>
+

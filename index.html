@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'agenda du cancre</title>
+    <link rel="icon" href="public/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script><!--sert à crypter les mots de pase--->
+</head>
+
+<!-----boite de dialogue Connexion------->
+
+<body>
+    <div id="login-container">
+        <img src="public/logo.png" alt="Logo L'agenda du cancre" id="logo">
+        
+        <!-- Titre -->
+        <h1 id="title">L'AGENDA DU CANCRE</h1>
+        
+        <!-- Slogan -->
+        <p id="slogan">PARCE QU'IL N'EST JAMAIS TROP TARD POUR BIEN FAIRE</p>
+        
+        <form id="login-form">
+            <label for="username">ID :</label>
+            <input type="text" id="username" placeholder="ID" required>
+    
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+    
+            <button type="submit">Connexion</button>
+            <p id="error-message" style="color: red;"></p>
+        </form>
+    </div>
+</body>
+
+<script src="app/script.js"></script> 
